@@ -3,122 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Challenge - Cloudflare</title>
+    <title>Проверка</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-            background-color: #f8f8f8;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            animation: slideFadeIn 1.25s ease-out forwards;
-        }
-        .security-title {
-            font-size: 5em;
-            font-weight: 700;
-            color: #ff6a00;
-            margin: 0;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(120deg, #ff6a00, #ffae74, #ff6a00);
-            background-size: 200% auto;
-            animation: shine 10s infinite;
-        }
-        .security-message {
-            font-size: 2em;
-            font-weight: 700;
-            color: #000000;
-            margin: 20px 0;
-        }
-        .security-details {
-            font-size: 1em;
-            color: #666666;
-            margin-bottom: 50px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1em;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #ff6a00;
-            transition: background-color 0.3s, transform 0.3s;
-            margin-top: 30px;
-        }
-        .button:hover {
-            background-color: #cc5800;
-            transform: scale(1.25);
-        }
-        @keyframes slideFadeIn {
-            0% {
-                transform: translateY(-50%) scale(0.5);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0) scale(1);
-                opacity: 1;
-            }
-        }
-        @keyframes shine {
-            0%, 100% {
-                background-position: left bottom;
-            }
-            50% {
-                background-position: right top;
-            }
-        }
-        .cloudflare-logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 150px;
-        }
-        .label {
-            display: inline-block;
-            background-color: #e5e7eb;
-            color: #374151;
-            padding: 0.5em 1em;
-            font-size: 0.875em;
-            font-weight: 700;
-            border-radius: 0.375rem;
-            margin: 0.25em;
-        }
-        .info-section {
-            margin-top: 2em;
-        }
+        /*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
+        * { border: 0 solid #e5e7eb; box-sizing: border-box }
+        :after, :before { --tw-content: "" }
+        :host, html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: 'Caros', sans-serif; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-tap-highlight-color: transparent }
+        body { line-height: inherit; margin: 0 }
+        img, video { height: auto; max-width: 100% }
+        .body { background-color: #09090b; font-family: 'Caros', sans-serif }
+        .absolute { position: absolute }
+        .relative { position: relative }
+        .left-0 { left: 0 }
+        .top-0 { top: 0 }
+        .z-\[-1\] { z-index: -1 }
+        .flex { display: flex }
+        /* .h-[100vh] { height: 100vh } */
+        .w-full { width: 100% }
+        .flex-col { flex-direction: column }
+        .items-center { align-items: center }
+        .justify-center { justify-content: center }
+        .gap-8 { gap: 2rem }
+        .rounded-3xl { border-radius: 1.5rem }
+        .border-2 { border-width: 2px }
+        .border-zinc-800\/20 { border-color: rgba(39, 39, 42, .2) }
+        .bg-zinc-900\/50 { background-color: rgba(24, 24, 27, .5) }
+        .p-8 { padding: 2rem }
+        .text-center { text-align: center }
+        .font-\[Outfit\] { font-family: 'Caros', sans-serif }
+        .text-6xl { font-size: 3.75rem; line-height: 1 }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem }
+        .font-semibold { font-weight: 600 }
+        .text-white { color: rgb(255, 255, 255) }
+        .text-zinc-200 { color: rgb(228, 228, 231) }
+        .backdrop-blur-lg { backdrop-filter: blur(16px) }
+        @keyframes general { 0% { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+        .general-animation { animation: general .5s cubic-bezier(.215, .61, .355, 1) }
+        @font-face { font-display: swap; font-family: 'Caros', sans-serif; font-style: normal; font-weight: 100 900; src: url("data:text/html; ") format("ttf") }
+        
+        /* Styles from CAPTCHA Script */
+        .button { display: inline-block; padding: 15px 30px; font-size: 1em; border-radius: 5px; text-decoration: none; color: #ffffff; background-color: #ff6a00; transition: background-color 0.3s, transform 0.3s; margin-top: 30px }
+        .button:hover { background-color: #7a05ff; transform: scale(1.25) }
+        .label { display: inline-block; background-color: #ffffff; color: #374151; padding: 0.5em 1em; font-size: 0.875em; font-weight: 700; border-radius: 0.375rem; margin: 0.25em }
+        .security-message { font-size: 2em; font-weight: 700; color: #7a05ff }
+        .info-section { margin-top: 2em }
+        .cloudflare-logo { width: 150px; margin-bottom: 20px; }
     </style>
 </head>
-<body>
-    <img src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg" alt="Cloudflare logo" class="cloudflare-logo">
-    <div class="container">
-        <div class="security-title">Interactive Challenge</div>
-        <div class="security-message">Please complete the security check</div>
-        <div class="security-details">
-            To continue, please solve the challenge below:
+<body class="body">
+    <div id="__nuxt">
+        <div class="p-8 relative h-[100vh] flex flex-col gap-8 justify-center items-center">
+            
+            <div class="general-animation">
+                <p class="text-white text-6xl font-[Outfit]">Идёт проверка...</p>
+            </div>
+
+            <div class="general-animation border-2 backdrop-blur-lg bg-zinc-900/50 border-zinc-800/20 rounded-3xl p-8 flex-col gap-6">
+                <div class="grid justify-center items-center text-center gap-4">
+                    <div class="flex gap-4 items-center text-center justify-center">
+                        <!-- <img src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg" class="cloudflare-logo" alt="Cloudflare logo"> -->
+                        <h1 class="font-[Outfit] font-semibold text-xl text-white">Neverhook</h1>
+                    </div>
+
+                    <div class="security-message">Please complete the security check</div>
+
+                    <div class="flex gap-4 items-center text-center justify-center">
+                        <p class="text-zinc-200">To continue, please solve the challenge below:</p>
+                    </div>
+
+                    <!-- CAPTCHA BOX -->
+                    ::CAPTCHA_BOX::
+
+                    <div class="info-section">
+                        <span class="label">Ray ID: <span id="rayID">::RAY_ID::</span></span>
+                        <span class="label">Your IP: <span id="userIPLabel">::CLIENT_IP::</span></span>
+                    </div>
+<!-- 
+                    <a href="javascript:history.back()" class="button">Go back</a> -->
+                </div>
+            </div>
         </div>
-        ::CAPTCHA_BOX::
-        <div class="info-section">
-            <span class="label">Ray ID: <span id="rayID">::RAY_ID::</span></span>
-            <span class="label">Your IP: <span id="userIPLabel">::CLIENT_IP::</span></span>
-        </div>
-        <a href="javascript:history.back()" class="button">Go back</a>
     </div>
+
     <script>
         document.getElementById('userIPLabel').textContent = '::CLIENT_IP::' || '0.0.0.0';
         document.getElementById('rayID').textContent = '::RAY_ID::' || 'unknown';
